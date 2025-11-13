@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aurora Madera - Portafolio de Desarrollador</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Font 'Inter' -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      #typing-cursor {
+        animation: blink 0.7s infinite;
+      }
+
+      @keyframes blink {
+        0%,
+        100% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+      }
+
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+
+      .is-visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"
+  >
+    <header
+      class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200 dark:border-gray-700 transition-colors duration-300"
+    >
+      <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-16">
+          <div class="flex-shrink-0">
+            <a
+              href="#inicio"
+              class="text-2xl font-bold text-indigo-600 dark:text-indigo-400"
+              >Auroa Vanessa Madera Canul</a
+            >
+          </div>
+
+          <div class="hidden md:flex items-center space-x-6">
+            <a
+              href="#sobre-mi"
+              class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >Sobre Mí</a
+            >
+            <a
+              href="#proyectos"
+              class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >Proyectos</a
+            >
+            <a
+              href="#habilidades"
+              class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >Habilidades</a
+            >
+            <a
+              href="#contacto"
+              class="text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+              >Contacto</a
+            >
+          </div>
+
+          <div class="md:hidden flex items-center">
+            <button
+              id="mobile-menu-btn"
+              class="p-2 rounded-md text-gray-600 dark:text-gray-300 hover:text-indigo-600 dark:hover:text-indigo-400 focus:outline-none"
+            >
+              <svg
+                class="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h16m-7 6h7"
+                ></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <div
+        id="mobile-menu"
+        class="md:hidden hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700"
+      >
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          <a
+            href="#sobre-mi"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >Sobre Mí</a
+          >
+          <a
+            href="#proyectos"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >Proyectos</a
+          >
+          <a
+            href="#habilidades"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >Habilidades</a
+          >
+          <a
+            href="#contacto"
+            class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+            >Contacto</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section
+        id="inicio"
+        class="min-h-screen flex items-center justify-center text-center px-4 py-20"
+      >
+        <div>
+          <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+            Hola, soy
+            <span class="text-indigo-600 dark:text-indigo-400"
+              >Aurora Vanessa Madera Canul</span
+            >
+          </h1>
+          <h2
+            class="text-3xl md:text-4xl font-medium text-gray-700 dark:text-gray-300 mt-4 h-12"
+          >
+            <span
+              id="typing-effect"
+              class="text-indigo-600 dark:text-indigo-400"
+            ></span>
+            <span id="typing-cursor" class="text-gray-700 dark:text-gray-300"
+              >|</span
+            >
+          </h2>
+          <p
+            class="text-lg text-gray-600 dark:text-gray-400 mt-6 max-w-xl mx-auto"
+          >
+            Aprendiz ágil y adaptable de Ing. en Sistemas (ITM), con habilidades en Front-End, Back-End y diseño. Busco oportunidad para aplicar conocimientos y evolucionar en el desarrollo de software
+          </p>
+          <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <a
+              href="#proyectos"
+              class="px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300"
+            >
+              Ver Mis Proyectos
+            </a>
+            <a
+              href="#contacto"
+              class="px-8 py-3 bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 font-medium rounded-lg shadow-md hover:bg-gray-300 dark:hover:bg-gray-600 transition-all duration-300"
+            >
+              Contáctame
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="sobre-mi"
+        class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
+      >
+        <h3
+          class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white"
+        >
+          Sobre Mí
+        </h3>
+        <div
+          class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-center gap-16 px-4"
+        >
+          <div class="md:w-1/3 animate-on-scroll">
+            <img
+              src="https://placehold.co/400x400/e2e8f0/64748b?text=Tu+Foto+Aqu%C3%AD"
+              alt="Foto de [Tu Nombre]"
+              class="rounded-lg shadow-xl w-full max-w-xs mx-auto"
+            />
+          </div>
+
+          <div
+            class="md:w-2/3 text-lg text-gray-700 dark:text-gray-300 space-y-6 animate-on-scroll"
+            style="transition-delay: 150ms"
+          >
+            <p>
+              Estoy estudiando Ing. en Sistemas en el ITM. Me motiva mucho tomar una idea y construir algo real programando. Me encanta que en tecnología siempre hay algo nuevo que aprender y la posibilidad de crear cosas útiles e innovadoras.
+            </p>
+            <p>
+              Estoy enfocándome en el desarrollo Front-End, poniendo en práctica mis conocimientos de HTML, CSS y JavaScript. Aunque también tengo bases de Python y Java por la carrera, me interesa mucho la parte de crear interfaces.
+            </p>
+            <p>
+             En mi tiempo libre, me gusta balancear las cosas. Disfruto nadar para despejar la mente, y también me gusta leer o ver cursos. Me ayuda a mantenerme creativa.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="proyectos" class="py-20">
+        <h3
+          class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white"
+        >
+          Proyectos Destacados
+        </h3>
+        <div
+          class="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10"
+        >
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-on-scroll"
+          >
+            <img
+              src="https://placehold.co/600x400/e2e8f0/64748b?text=Proyecto+1"
+              alt="Imagen del Proyecto 1"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h4 class="text-2xl font-bold text-gray-900 dark:text-white">
+                [Nombre del Proyecto 1]
+              </h4>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                [Breve descripción del proyecto, el problema que resuelve y tu
+                rol.]
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm font-medium"
+                  >HTML</span
+                >
+                <span
+                  class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm font-medium"
+                  >CSS</span
+                >
+                <span
+                  class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm font-medium"
+                  >JavaScript</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-on-scroll"
+            style="transition-delay: 150ms"
+          >
+            <img
+              src="https://placehold.co/600x400/e2e8f0/64748b?text=Proyecto+2"
+              alt="Imagen del Proyecto 2"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h4 class="text-2xl font-bold text-gray-900 dark:text-white">
+                [Nombre del Proyecto 2]
+              </h4>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                [Breve descripción del proyecto, el problema que resuelve y tu
+                rol.]
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm font-medium"
+                  >HTML</span
+                >
+                <span
+                  class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm font-medium"
+                  >Tailwind CSS</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:-translate-y-1 animate-on-scroll"
+            style="transition-delay: 300ms"
+          >
+            <img
+              src="https://placehold.co/600x400/e2e8f0/64748b?text=Proyecto+3"
+              alt="Imagen del Proyecto 3"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <h4 class="text-2xl font-bold text-gray-900 dark:text-white">
+                [Nombre del Proyecto 3]
+              </h4>
+              <p class="text-gray-600 dark:text-gray-400 mt-2">
+                [Breve descripción del proyecto, el problema que resuelve y tu
+                rol.]
+              </p>
+              <div class="mt-4 flex flex-wrap gap-2">
+                <span
+                  class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm font-medium"
+                  >JavaScript</span
+                >
+                <span
+                  class="px-3 py-1 bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-300 rounded-full text-sm font-medium"
+                  >HTML</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- HABILIDADES TÉCNICAS ACTUALIZADAS -->
+      <section
+        id="habilidades"
+        class="py-20 bg-white dark:bg-gray-800 transition-colors duration-300"
+      >
+        <h3
+          class="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white"
+        >
+          Habilidades Técnicas
+        </h3>
+
+        <div class="max-w-5xl mx-auto flex flex-wrap justify-center gap-8 px-4">
+          <!-- HTML5 -->
+          <div
+            class="flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-44 animate-on-scroll"
+          >
+            <svg
+              class="h-16 w-16 text-orange-500 dark:text-orange-400"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="HTML5"
+            >
+              <rect
+                x="6"
+                y="4"
+                width="36"
+                height="40"
+                rx="6"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M16 17h16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M16 23h16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M16 29h10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <!-- < /> tag -->
+              <path
+                d="M18 34l-4-4 4-4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M30 26l4 4-4 4"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="mt-4 text-xl font-medium text-gray-900 dark:text-white"
+              >HTML5</span
+            >
+          </div>
+
+          <!-- CSS3 -->
+          <div
+            class="flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-44 animate-on-scroll"
+            style="transition-delay: 100ms"
+          >
+            <svg
+              class="h-16 w-16 text-blue-500 dark:text-blue-400"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="CSS3"
+            >
+              <rect
+                x="6"
+                y="4"
+                width="36"
+                height="40"
+                rx="6"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M16 16h16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M16 22h13"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M16 28h10"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M16 34h7"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <!-- corchete derecho { -->
+              <path
+                d="M30 14c2 0 3 1 3 3v2c0 1-.5 2-1.5 2.5 1 .5 1.5 1.5 1.5 2.5v2c0 2-1 3-3 3"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+            </svg>
+            <span class="mt-4 text-xl font-medium text-gray-900 dark:text-white"
+              >CSS3</span
+            >
+          </div>
+
+          <!-- JavaScript -->
+          <div
+            class="flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-44 animate-on-scroll"
+            style="transition-delay: 200ms"
+          >
+            <svg
+              class="h-16 w-16 text-yellow-400 dark:text-yellow-300"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="JavaScript"
+            >
+              <rect
+                x="6"
+                y="6"
+                width="36"
+                height="36"
+                rx="8"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <!-- ( ) => -->
+              <path
+                d="M16 18c-2 2-2 10 0 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M32 18c2 2 2 10 0 12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M20 24h8"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+              />
+              <path
+                d="M25 21l3 3-3 3"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <span class="mt-4 text-xl font-medium text-gray-900 dark:text-white"
+              >JavaScript</span
+            >
+          </div>
+
+          <!-- Tailwind CSS -->
+          <div
+            class="flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-44 animate-on-scroll"
+            style="transition-delay: 300ms"
+          >
+            <svg
+              class="h-16 w-16 text-cyan-400 dark:text-cyan-300"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Tailwind CSS"
+            >
+              <rect
+                x="6"
+                y="6"
+                width="36"
+                height="36"
+                rx="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <!-- doble ola -->
+              <path
+                d="M12 28c3-6 7-6 10 0 3-6 7-6 10 0"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12 20c3-6 7-6 10 0 3-6 7-6 10 0"
+                stroke="currentColor"
+                stroke-width="2.2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                opacity="0.75"
+              />
+            </svg>
+            <span class="mt-4 text-xl font-medium text-gray-900 dark:text-white"
+              >Tailwind CSS</span
+            >
+          </div>
+
+          <!-- Git -->
+          <div
+            class="flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-44 animate-on-scroll"
+            style="transition-delay: 400ms"
+          >
+            <svg
+              class="h-16 w-16 text-red-500 dark:text-red-400"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Git"
+            >
+              <rect
+                x="6"
+                y="6"
+                width="36"
+                height="36"
+                rx="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                d="M18 30l12-12"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <circle cx="18" cy="30" r="2" fill="currentColor" />
+              <circle cx="24" cy="24" r="2" fill="currentColor" />
+              <circle cx="30" cy="18" r="2" fill="currentColor" />
+            </svg>
+            <span class="mt-4 text-xl font-medium text-gray-900 dark:text-white"
+              >Git</span
+            >
+          </div>
+
+          <!-- Python -->
+          <div
+            class="flex flex-col items-center p-6 bg-white dark:bg-gray-900 rounded-lg shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1 w-44 animate-on-scroll"
+            style="transition-delay: 500ms"
+          >
+            <svg
+              class="h-16 w-16 text-emerald-400 dark:text-emerald-300"
+              viewBox="0 0 48 48"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="Python"
+            >
+              <rect
+                x="8"
+                y="6"
+                width="32"
+                height="36"
+                rx="10"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <!-- cuerpo estilo serpiente -->
+              <path
+                d="M18 18c0-3 2-5 6-5s6 2 6 5v2c0 2-1 3-3 3h-4c-2 0-3 1-3 3v2c0 3 2 5 6 5s6-2 6-5"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <!-- ojo -->
+              <circle cx="21" cy="17" r="1.2" fill="currentColor" />
+            </svg>
+            <span class="mt-4 text-xl font-medium text-gray-900 dark:text-white"
+              >Python</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="py-20 text-center">
+        <h3 class="text-4xl font-bold text-gray-900 dark:text-white">
+          Hablemos
+        </h3>
+        <p
+          class="text-lg text-gray-600 dark:text-gray-400 mt-4 max-w-xl mx-auto px-4"
+        >
+          [¿Estás buscando un desarrollador? ¿Quieres colaborar? ¿O simplemente
+          saludar? ¡Mi bandeja de entrada está abierta!]
+        </p>
+        <a
+          href="mailto:[auroramadera04@outlook.com]"
+          class="mt-8 inline-block px-8 py-3 bg-indigo-600 text-white font-medium rounded-lg shadow-md hover:bg-indigo-700 transition-all duration-300"
+        >
+          Enviar un Email
+        </a>
+      </section>
+    </main>
+
+    <footer
+      class="bg-gray-800 dark:bg-gray-950 text-gray-300 dark:text-gray-400 py-12 transition-colors duración-300"
+    >
+      <div class="max-w-7xl mx-auto px-4 text-center">
+        <div class="flex justify-center space-x-6 mb-6">
+          <!-- Solo GitHub -->
+          <a href="#" class="hover:text-white transition-colors">
+            <span class="sr-only">GitHub</span>
+            <svg
+              class="h-6 w-6"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+              role="img"
+              aria-label="GitHub Logo"
+            >
+              <path
+                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.034c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.91 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"
+              />
+            </svg>
+          </a>
+        </div>
+        <p class="text-sm">
+          © <span id="current-year"></span> Aurora Vanessa Madera Canul. Todos los derechos
+          reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("current-year").textContent =
+          new Date().getFullYear();
+
+        const menuBtn = document.getElementById("mobile-menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const mobileMenuLinks = document.querySelectorAll(".mobile-menu-link");
+
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        mobileMenuLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+
+        const typingElement = document.getElementById("typing-effect");
+        const phrases = [
+          "Desarrollador Web Junior",
+          "Programador Front-End",
+          "Entusiasta del Código",
+          "Creativo y Analítico",
+        ];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const delayBetweenPhrases = 2000;
+
+        function type() {
+          const currentPhrase = phrases[phraseIndex];
+          let timeoutSpeed;
+
+          if (isDeleting) {
+            typingElement.textContent = currentPhrase.substring(
+              0,
+              charIndex - 1
+            );
+            charIndex--;
+            timeoutSpeed = deletingSpeed;
+
+            if (charIndex === 0) {
+              isDeleting = false;
+              phraseIndex = (phraseIndex + 1) % phrases.length;
+              timeoutSpeed = typingSpeed * 5;
+            }
+          } else {
+            typingElement.textContent = currentPhrase.substring(
+              0,
+              charIndex + 1
+            );
+            charIndex++;
+            timeoutSpeed = typingSpeed;
+
+            if (charIndex === currentPhrase.length) {
+              isDeleting = true;
+              timeoutSpeed = delayBetweenPhrases;
+            }
+          }
+
+          setTimeout(type, timeoutSpeed);
+        }
+
+        setTimeout(type, 500);
+
+        const animatedElements =
+          document.querySelectorAll(".animate-on-scroll");
+        const observerOptions = {
+          root: null,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        function observerCallback(entries, observer) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }
+
+        const scrollObserver = new IntersectionObserver(
+          observerCallback,
+          observerOptions
+        );
+        animatedElements.forEach((el) => {
+          scrollObserver.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>
